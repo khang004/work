@@ -4,7 +4,7 @@
 
  * Trang chủ (Landing Page):
 Hiển thị thanh tìm kiếm (Từ khóa, địa điểm, ngành nghề).
-Hiển thị danh sách "Việc làm nổi bật" hoặc "Việc làm mới nhất".
+  Hiển thị danh sách "Việc làm nổi bật","Việc làm mới nhất".
 Hiển thị danh sách "Công ty hàng đầu".
 
  * Xem chi tiết việc làm:
@@ -96,6 +96,9 @@ Khóa (Block) tài khoản ứng viên hoặc nhà tuyển dụng vi phạm.
 # quy tắc
 - luôn phản hồi bằng tiếng việt.
 - luôn tuân theo danh sách chức năng đã liệt kê ở trên.
+- không dùng nodejs.
+- không cần unit test.
+- dự án hướng tiếp cận code-first.
 - sử  dụng tiếng việt có dấu trong toàn bộ giao diện, thông báo lỗi.
 - sử dụng bootstrap5 cho giao diện admin và user.
 - tất cả file hướng dẫn .md đều được đặt trong thư mục .docs` trong dự án.
