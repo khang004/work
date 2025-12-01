@@ -11,7 +11,17 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->alias([
+            'role' => \App\Http\Middleware\CheckRole::class,
+            'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+            'admin.session' => \App\Http\Middleware\SetAdminSession::class,
+        ]);
+        
+        // Set priority để admin.session chạy trước StartSession
+        $middleware->priority([
+            \App\Http\Middleware\SetAdminSession::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
